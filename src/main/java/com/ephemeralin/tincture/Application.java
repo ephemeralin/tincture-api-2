@@ -1,13 +1,13 @@
-package com.ephemeralin.tinctureapi2;
+package com.ephemeralin.tincture;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TinctureApi2Application {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TinctureApi2Application.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
