@@ -33,10 +33,7 @@ public class RssFeedController {
     @GetMapping("/feeds")
     public List<RssFeed> getRssFeedByFeedArea(@RequestParam (value = "feedArea", defaultValue = "") String feedAreaString) {
         try {
-            RssFeed rssFeed = rssFeedService.findByFeedArea(FeedArea.valueOf(feedAreaString));
-            ArrayList<RssFeed> rssFeeds = new ArrayList<>();
-            rssFeeds.add(rssFeed);
-            return rssFeeds;
+            return rssFeedService.findByFeedArea(FeedArea.valueOf(feedAreaString));
         } catch (Exception ex) {
             return null;
         }

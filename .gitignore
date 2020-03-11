@@ -20,3 +20,4 @@ application.properties
 *.iml
 *.ipr
 
+/.old_eb/

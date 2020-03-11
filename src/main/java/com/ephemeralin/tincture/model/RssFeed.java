@@ -8,7 +8,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConvertedEnum;
 import java.io.Serializable;
 import java.util.List;
 
-@DynamoDBTable(tableName = "RSS_FEEDS_TABLE_NAME")
+@DynamoDBTable(tableName = "tin-rssFeeds-dev")
 public class RssFeed implements Serializable {
 
     private static final long serialVersionUID = 100L;

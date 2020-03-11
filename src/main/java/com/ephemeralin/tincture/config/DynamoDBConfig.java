@@ -22,11 +22,16 @@ public class DynamoDBConfig {
     private String region;
 
     @Bean
-    public DynamoDBMapper dynamoDBMapper() {
-        AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
+    public AmazonDynamoDB amazonDynamoDB() {
+        return AmazonDynamoDBClientBuilder.standard()
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey)))
                 .withRegion(Regions.fromName(region))
                 .build();
+    }
+
+    @Bean
+    public DynamoDBMapper dynamoDBMapper() {
+        AmazonDynamoDB client = amazonDynamoDB();
         return new DynamoDBMapper(client, DynamoDBMapperConfig.DEFAULT);
     }
 }
